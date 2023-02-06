@@ -1,5 +1,6 @@
-import { Component, Optional, Self, SkipSelf } from '@angular/core';
+import { Component, Optional, Self, SkipSelf, ViewChild } from '@angular/core';
 import { AppserService } from 'src/appser.service';
+import { ChildComponent } from './child/child.component';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { AppserService } from 'src/appser.service';
   providers:[AppserService]
 })
 export class AppComponent {
+  @ViewChild(ChildComponent) viewdata !:ChildComponent
   
   constructor(/*@Optional()*/ @Self() private user:AppserService,
   @SkipSelf() private parentUser: AppserService
@@ -16,8 +18,14 @@ export class AppComponent {
   }
   title = 'hello elgar';
   inputname=''
-  TransferData(name:any){
+  inputmark=''
+  inputobject={"name":"","marks":""}
+  response:any;
+    TransferData(name:any,mark:any){ 
     this.inputname=name
+    this.inputmark=mark
+    this.inputobject={"name":name,"marks":mark}
+    this.response=this.viewdata.updatelist(this.inputobject)
 
   }
 }

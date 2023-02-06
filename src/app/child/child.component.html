@@ -1,4 +1,15 @@
 <p>child works!</p>
-<p>
-    {{namedata}}
-</p>
+my name is {{namedata}} and i scored {{markdata}}
+Her name is {{objectdata.name}} and i scored {{objectdata.marks}}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Mark</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let item of listarray">
+        <td>{{item.name}}</td>
+        <td>{{item.marks}}</td>
+    </tbody>
+</table>

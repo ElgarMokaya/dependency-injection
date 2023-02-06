@@ -6,9 +6,9 @@ import { Logger } from './app/logger';
     providedIn:'root'
   }
 )
-export class AppserService implements Logger{
+export class AppserService {
 
   constructor() { }
-  prefix: 'root';
-  log: (message: string) => void;
+  
+  
 }

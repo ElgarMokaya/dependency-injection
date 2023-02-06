@@ -9,11 +9,18 @@
 </div>
 <div class="form-group">
     
-    <a (click)="TransferData(name.value)">Submit</a>
+    <label>Marks</label>
+    <input #mark class="form-control">
+        
     </div>
     
-
-<app-child [namedata]="inputname"></app-child>
+<div class="form-group">
+    
+    <a (click)="TransferData(name.value,mark.value)">Submit</a>
+    </div>
+    
+    <span>{{response}}</span>
+<app-child [namedata]="inputname"[markdata]="inputmark"[objectdata]="inputobject"></app-child>
 
 
 <router-outlet></router-outlet>
