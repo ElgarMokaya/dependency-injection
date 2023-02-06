@@ -6,11 +6,12 @@ import { Component, Input,OnInit } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent {
-@Input() namedata:any;
+  @Input() namedata:any;
 constructor(){
 
 }
 ngOnInit():void{
+  
 
 }
 }
