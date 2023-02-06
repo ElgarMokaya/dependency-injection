@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Optional, Self, SkipSelf } from '@angular/core';
+import { AppserService } from 'src/appser.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers:[AppserService]
 })
 export class AppComponent {
-  title = 'my-app';
+  constructor(/*@Optional()*/ @Self() private user:AppserService,
+  @SkipSelf() private parentUser: AppserService
+  ){
+
+  }
+  title = 'hello elgar';
 }
