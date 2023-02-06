@@ -14,4 +14,9 @@ export class AppComponent {
 
   }
   title = 'hello elgar';
+  inputname=''
+  TransferData(name:any){
+    this.inputname=name
+
+  }
 }
