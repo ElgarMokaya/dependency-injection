@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
 import { FormsComponent } from './forms/forms.component';
+import { ProductsComponent } from './products/products.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { FormsComponent } from './forms/forms.component';
         AppComponent,
         ChildComponent,
         FormsComponent,
+        ProductsComponent,
        
     ],
     providers: [],
