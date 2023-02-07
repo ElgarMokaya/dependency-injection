@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
 import { FormsComponent } from './forms/forms.component';
 import { ProductsComponent } from './products/products.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { StudentsComponent } from './students/students.component';
+
 
 
 @NgModule({
@@ -14,6 +17,8 @@ import { ProductsComponent } from './products/products.component';
         ChildComponent,
         FormsComponent,
         ProductsComponent,
+        EmployeesComponent,
+        StudentsComponent,
        
     ],
     providers: [],

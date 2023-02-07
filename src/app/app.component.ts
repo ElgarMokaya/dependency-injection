@@ -2,6 +2,7 @@ import { Component, Optional, Self, SkipSelf, ViewChild } from '@angular/core';
 import { AppserService } from 'src/appser.service';
 import { ChildComponent } from './child/child.component';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
